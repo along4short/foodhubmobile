@@ -1,5 +1,7 @@
 {
   "name": "foodhubmobile",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
