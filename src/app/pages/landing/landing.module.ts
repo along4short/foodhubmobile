@@ -22,4 +22,5 @@ const routes: Routes = [
   declarations: [LandingPage, LoginPage, RegisterPage],
   entryComponents: [LoginPage, RegisterPage]
 })
+
 export class LandingPageModule {}

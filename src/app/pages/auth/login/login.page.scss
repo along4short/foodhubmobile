@@ -1,0 +1,14 @@
+ion-card-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    border: 50% 20% 10% 10%;
+    padding-top: 30px;
+
+}
+ion-card{
+    display: flex;
+        flex-direction: column;
+        height: 100% !important;
+        margin: 0 !important;
+}
