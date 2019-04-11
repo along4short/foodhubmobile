@@ -1,8 +1,25 @@
-ion-content{
-    --background: #fff url('/assets/img/back.jpg') no-repeat center center / cover;
-}
-
-ion-toolbar {
---background: transparent;
---ion-color-base: transparent !important;
+.welcome-card ion-img {
+    max-height: 35vh;
+    overflow: hidden;
+  }
+  ion-content {
+    max-height: 100%;
+    overflow: hidden;
+    --background: url("steak.jpg") no-repeat fixed center;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    --background-size: contain; 
+  
+  }
+  .register{
+    background-color: none;
+    padding: 5px;
+    margin: none;
+    border: none;
+    --box-shadow: none;
+  }
+ion-title{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
 }

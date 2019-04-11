@@ -46,16 +46,7 @@ export class AppComponent {
   }
   // When Logout Button is pressed 
   logout() {
-    this.authService.logout().subscribe(
-      data => {
-        this.alertService.presentToast(data['message']);        
-      },
-      error => {
-        console.log(error);
-      },
-      () => {
-        this.navCtrl.navigateRoot('/landing');
-      }
-    );
+    this.navCtrl.navigateRoot('/landing');
   }
 }
+

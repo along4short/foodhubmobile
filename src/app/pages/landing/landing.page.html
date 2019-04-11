@@ -1,20 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-     <ion-title>Foodhub</ion-title> 
-  </ion-toolbar>
-</ion-header>
-<ion-content>
   
-</ion-content>
-<ion-footer>
-  <ion-toolbar>
-      <ion-row>
-        <ion-col>
-          <ion-button color="primary" expand="full" color="primary" (click)="login()">Login</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button color="primary" expand="full" color="danger" (click)="register()">Register</ion-button>
-        </ion-col>
-      </ion-row>
-  </ion-toolbar>
-</ion-footer>
+    <ion-row>
+    <ion-col >   
+    </ion-col>
+    <ion-col >
+    </ion-col >
+    <ion-col >
+    </ion-col >
+    <ion-col >
+      <ion-button shape="round" size= "default" color="danger" (click)="login()">Sign In</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-header>
+
+<ion-content fullscreen="true">
+  <br><br><br>
+  <ion-title color="light">
+      FOODHUB
+  </ion-title>
+  
+    <br><br><br><br><br>
+  <ion-searchbar color="danger" animated></ion-searchbar>
+  <br> <br> <br> <br> <br> <br> <br><br><br><br><br><br><br>
+  <ion-row>
+      <ion-col >
+      </ion-col>
+      <ion-col size="6">
+          <ion-button shape="round" color="danger" (click)="register()">Create Account</ion-button>
+      </ion-col >
+      <ion-col size="3" >
+      </ion-col>
+    </ion-row>
+  </ion-content>

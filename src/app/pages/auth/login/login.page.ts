@@ -32,9 +32,9 @@ export class LoginPage implements OnInit {
     return await registerModal.present();
   }
   login(form: NgForm) {
-    this.authService.login(form.value.email, form.value.password).subscribe(
+    this.authService.login(form.value.username, form.value.password).subscribe(
       data => {
-        this.alertService.presentToast("Logged In");
+        this.alertService.presentToast("You are logged In");
       },
       error => {
         console.log(error);

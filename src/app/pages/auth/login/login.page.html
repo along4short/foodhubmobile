@@ -7,8 +7,8 @@
 <ion-content padding>
   <form #form="ngForm" (ngSubmit)="login(form)" method="post">
     <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input ngModel type="email" name="email"></ion-input>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input ngModel type="username" name="username"></ion-input>
     </ion-item>
   
     <ion-item>
@@ -18,8 +18,8 @@
   
     <p text-right>Forgot Password?</p>
   
-    <ion-button type="submit" expand="full" color="primary">Login</ion-button>
+    <ion-button shape="round" type="submit" expand="full" color="primary">Login</ion-button>
   </form>
   <p text-center>Don't have a account?</p>
-  <ion-button expand="full" color="danger" (click)="registerModal()">Register</ion-button>
+  <ion-button shape="round" expand="full" color="danger" (click)="registerModal()">Register</ion-button>
 </ion-content> 
