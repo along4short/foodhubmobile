@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-button color="light" (click)="dismissAddRestaurant()">Close</ion-button>
+    <ion-title>Add a Restaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="registerRestaurant(form)" method="post">
+    <ion-item>
+      <ion-label position="floating">Restaurant name</ion-label>
+      <ion-input type="restaurant_name" ngModel name="restaurant_name"></ion-input>
+    </ion-item>
+
+     <ion-item>
+      <ion-label position="floating">Restaurant Type</ion-label>
+      <ion-input type="restaurant_type" ngModel name="restaurant_type"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Bio</ion-label>
+        <ion-input type="bio" ngModel name="bio"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Restaurant Location</ion-label>
+      <ion-input type="locations" ngModel name="locations"></ion-input>
+    </ion-item>
+     
+  
+    <ion-button shape="round" type="submit" expand="full" color="danger">Add Restaurant</ion-button>
+  </form>
+
+</ion-content>  

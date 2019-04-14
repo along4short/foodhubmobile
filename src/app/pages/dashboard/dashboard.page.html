@@ -7,8 +7,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
-  <div *ngIf="user != undefined">
-      Welcome {{ user["firstname"]  }} {{ user["lastname"]  }}
+  <div >
+     
+
+      <ion-button size="small" (click)="addRestaurant()">Add Restaurant</ion-button>
+      <ion-button size="small" (click)="deleteRestaurant()">Delete Restaurant</ion-button>
       
   </div>
 </ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-button color="light" (click)="dismissDeleteRestaurant()">Close</ion-button>
+    <ion-title>Delete a Restaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="deleteRestaurant(form)" method="post">
+    <ion-item>
+      <ion-label position="floating">Restaurant name</ion-label>
+      <ion-input type="restaurant_name" ngModel name="restaurant_name"></ion-input>
+    </ion-item>
+
+     
+     
+  
+    <ion-button shape="round" type="submit" expand="full" color="danger">Delete Restaurant</ion-button>
+  </form>
+
+</ion-content>  

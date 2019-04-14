@@ -15,7 +15,9 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule', canActivate: [AuthGuard] },
   { path: 'list', loadChildren: './list/list.module#ListPageModule', canActivate: [AuthGuard] },
   { path: 'customer-profile', loadChildren: './pages/customer-profile/customer-profile.module#CustomerProfilePageModule' },
-  { path: 'restaurant-profile', loadChildren: './pages/restaurant-profile/restaurant-profile.module#RestaurantProfilePageModule' },
+  { path: 'restaurant-profile', loadChildren: './pages/restaurant-profile/restaurant-profile.module#RestaurantProfilePageModule' },  { path: 'add-restaurant', loadChildren: './pages/add-restaurant/add-restaurant.module#AddRestaurantPageModule' },
+  { path: 'delete-restaurant', loadChildren: './pages/delete-restaurant/delete-restaurant.module#DeleteRestaurantPageModule' },
+
   ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

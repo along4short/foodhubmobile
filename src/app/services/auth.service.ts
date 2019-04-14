@@ -4,10 +4,13 @@ import { tap } from 'rxjs/operators';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { EnvService } from './env.service';
 import { User } from '../models/user';
+import { Restaurant } from '../models/restaurant';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  user: User;
   isLoggedIn = false;
   token:any;
   constructor(
@@ -38,6 +41,16 @@ export class AuthService {
       {username: username, password: password, firstname: firstname, lastname: lastname, contact_number: contact_number, gender: gender}
     )
   }
+  addRestaurant(restaurant_name: String, restaurant_type: String, bio: String, locations: String ) {
+    return this.http.post(this.env.API_URL + 'restaurant/',
+      {restaurant_name: restaurant_name, restaurant_type: restaurant_type, bio: bio, locations: locations}
+    )
+  }
+  deleteRestaurant(restaurant_name: String) {
+    return this.http.delete<Restaurant>(this.env.API_URL + 'restaurant/',
+      {restaurant_name: restaurant_name}
+    )
+  }
   logout() {
     const headers = new HttpHeaders({
       'Authorization': this.token["token_type"]+" "+this.token["access_token"]
@@ -52,11 +65,11 @@ export class AuthService {
       })
     )
   }
-  user() {
+  user(username: String) {
     const headers = new HttpHeaders({
       'Authorization': this.token["token_type"]+" "+this.token["access_token"]
     });
-    return this.http.get<User>(this.env.API_URL + 'customer/along4short', {headers: headers })
+    return this.http.get<User>(this.env.API_URL + 'customer/', {headers: headers })
     .pipe(
       tap(user => {
         return user;
