@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule', canActivate: [AuthGuard] },
   { path: 'list', loadChildren: './list/list.module#ListPageModule', canActivate: [AuthGuard] },
   { path: 'customer-profile', loadChildren: './pages/customer-profile/customer-profile.module#CustomerProfilePageModule' },
+  { path: 'restaurant-profile', loadChildren: './pages/restaurant-profile/restaurant-profile.module#RestaurantProfilePageModule' },
   ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
