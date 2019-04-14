@@ -37,6 +37,10 @@ export class AuthService {
     return this.http.post(this.env.API_URL + 'customer/',
       {username: username, password: password, firstname: firstname, lastname: lastname, contact_number: contact_number, gender: gender}
     )
+  }registerOwner(username: String, password: String, firstname: String, lastname: String, contact_number: String, gender: String ) {
+    return this.http.post(this.env.API_URL + 'owner/',
+      {username: username, password: password, firstname: firstname, lastname: lastname, contact_number: contact_number, gender: gender}
+    )
   }
   logout() {
     const headers = new HttpHeaders({
